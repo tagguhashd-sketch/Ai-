@@ -1,0 +1,21 @@
+{
+  "name": "feeflow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FeeFlow — local-first student fee tracking. Register photo → JSON → paste → import → track. No build step, no runtime dependencies.",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "start": "python3 -m http.server 4173 --bind 0.0.0.0",
+    "test": "node --test tests/core.test.mjs tests/smoke.test.mjs",
+    "build:assets": "node tools/build-icons.mjs --og"
+  },
+  "devDependencies": {
+    "@expo-google-fonts/instrument-serif": "^0.4.1",
+    "@expo-google-fonts/jetbrains-mono": "^0.4.1",
+    "@expo-google-fonts/plus-jakarta-sans": "^0.4.2",
+    "@resvg/resvg-js": "^2.6.2",
+    "jsdom": "^30.1.2",
+    "wawoff2": "^2.0.1"
+  }
+}

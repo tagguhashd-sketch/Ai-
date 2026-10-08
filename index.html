@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-theme="ink">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FeeFlow — Fees, finally simple</title>
+  <meta name="description" content="FeeFlow turns a photo of your fee register into structured student fee records. Paste JSON from ChatGPT or Gemini, track paid, partial and unpaid, month by month — all stored privately on your device.">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0f0e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FeeFlow">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FeeFlow — Fees, finally simple">
+  <meta property="og:description" content="Register photo → JSON → paste → import. Local-first student fee tracking for teachers, tutors and coaching centres.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+
+  <div class="app">
+    <!-- ------------------------------------------------ desktop sidebar -->
+    <aside class="sidebar">
+      <a class="brand" href="#/dashboard" aria-label="FeeFlow home">
+        <img class="brand__mark" src="assets/icons/icon-192.png" alt="" width="34" height="34">
+        <span class="brand__word">Fee<b>Flow</b></span>
+        <span class="brand__tag">local-first fee tracker</span>
+      </a>
+
+      <nav class="sidebar__nav" aria-label="Primary">
+        <a class="sidebar__link" data-nav="dashboard" href="#/dashboard"><svg class="icon" aria-hidden="true"><use href="#i-grid"></use></svg>Dashboard<span class="kbd">D</span></a>
+        <a class="sidebar__link" data-nav="students" href="#/students"><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg>Students<span class="kbd">S</span></a>
+        <a class="sidebar__link" data-nav="import" href="#/import"><svg class="icon" aria-hidden="true"><use href="#i-inbox"></use></svg>Import<span class="kbd">I</span></a>
+        <a class="sidebar__link" data-nav="months" href="#/months"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>Months<span class="kbd">M</span></a>
+        <a class="sidebar__link" data-nav="settings" href="#/settings"><svg class="icon" aria-hidden="true"><use href="#i-sliders"></use></svg>Settings</a>
+      </nav>
+
+      <div class="sidebar__foot">
+        <button type="button" class="sidebar__add" data-add-student>
+          <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>Add student
+        </button>
+        <p class="sidebar__privacy">
+          <svg aria-hidden="true"><use href="#i-lock"></use></svg>
+          Your students and payments never leave this browser. No accounts, no servers.
+        </p>
+      </div>
+    </aside>
+
+    <!-- ------------------------------------------------------- topbar -->
+    <header class="topbar">
+      <a class="brand brand--topbar" href="#/dashboard" aria-label="FeeFlow home">
+        <img class="brand__mark" src="assets/icons/icon-192.png" alt="" width="34" height="34">
+        <span class="brand__word">Fee<b>Flow</b></span>
+      </a>
+
+      <button type="button" class="month-chip" id="month-chip" aria-haspopup="menu" aria-expanded="false" aria-label="Switch month">
+        <span class="month-chip__dot" aria-hidden="true"></span>
+        <span class="month-chip__label">—</span>
+        <svg class="month-chip__chev" aria-hidden="true"><use href="#i-chev-down"></use></svg>
+      </button>
+
+      <span class="topbar__spacer"></span>
+
+      <div class="topbar__actions">
+        <button type="button" class="icon-btn" id="theme-btn" aria-label="Switch theme"></button>
+        <a class="icon-btn" href="#/settings" data-nav="settings" aria-label="Settings">
+          <svg aria-hidden="true"><use href="#i-sliders"></use></svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- ------------------------------------------------- routed view -->
+    <main class="view" id="view" tabindex="-1">
+      <noscript>
+        <div class="card" style="margin-top:24px">
+          <h1>FeeFlow needs JavaScript</h1>
+          <p class="muted">FeeFlow is a private, on-device fee tracker — it runs entirely in your browser, so please enable JavaScript to use it.</p>
+        </div>
+      </noscript>
+    </main>
+
+    <!-- --------------------------------------------- mobile bottom nav -->
+    <nav class="bottomnav" aria-label="Primary">
+      <a class="bottomnav__item" data-nav="dashboard" href="#/dashboard">
+        <svg aria-hidden="true"><use href="#i-grid"></use></svg><span>Home</span>
+      </a>
+      <a class="bottomnav__item" data-nav="students" href="#/students">
+        <svg aria-hidden="true"><use href="#i-users"></use></svg><span>Students</span>
+      </a>
+      <button type="button" class="fab" data-add-student aria-label="Add student">
+        <svg aria-hidden="true"><use href="#i-plus"></use></svg>
+      </button>
+      <a class="bottomnav__item" data-nav="import" href="#/import">
+        <svg aria-hidden="true"><use href="#i-inbox"></use></svg><span>Import</span>
+      </a>
+      <a class="bottomnav__item" data-nav="months" href="#/months">
+        <svg aria-hidden="true"><use href="#i-calendar"></use></svg><span>Months</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="js/core/util.js"></script>
+  <script src="js/core/money.js"></script>
+  <script src="js/core/importer.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/core/router.js"></script>
+  <script src="js/ui/icons.js"></script>
+  <script src="js/ui/toast.js"></script>
+  <script src="js/ui/modal.js"></script>
+  <script src="js/ui/charts.js"></script>
+  <script src="js/ui/components.js"></script>
+  <script src="js/ui/list.js"></script>
+  <script src="js/views/dashboard.js"></script>
+  <script src="js/views/students.js"></script>
+  <script src="js/views/import.js"></script>
+  <script src="js/views/months.js"></script>
+  <script src="js/views/settings.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

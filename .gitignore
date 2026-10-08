@@ -1,0 +1,6 @@
+# dependencies & local tooling (the published site needs no build step)
+node_modules/
+package-lock.json
+tools/.fontcache/
+.DS_Store
+*.log
