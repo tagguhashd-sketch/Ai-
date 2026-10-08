@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1614"/>
+      <stop offset="0.5" stop-color="#08100E"/>
+      <stop offset="1" stop-color="#0E211B"/>
+    </linearGradient>
+    <radialGradient id="og-glow" cx="0.78" cy="0.18" r="0.75">
+      <stop offset="0" stop-color="#1FB583" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#1FB583" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="og-flow" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#1FB583"/>
+      <stop offset="1" stop-color="#4BE3AC"/>
+    </linearGradient>
+    <linearGradient id="og-card" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#16211E"/>
+      <stop offset="1" stop-color="#101917"/>
+    </linearGradient>
+    <pattern id="og-rule" width="8" height="34" patternUnits="userSpaceOnUse">
+      <rect width="8" height="34" fill="none"/>
+      <line x1="0" y1="33.5" x2="8" y2="33.5" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+  <rect width="1200" height="630" fill="url(#og-rule)"/>
+  <rect width="1200" height="630" fill="url(#og-glow)"/>
+
+  <!-- wordmark -->
+  <g transform="translate(76 74) scale(1.06)">
+    <rect width="52" height="52" rx="13" fill="#0F2A23"/>
+    <rect width="52" height="52" rx="13" fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <g transform="translate(26 26) scale(0.78) translate(-32 -32)">
+      <path d="M22 19a3 3 0 0 1 3-3h17a3 3 0 0 1 0 6H28v6h11a3 3 0 0 1 0 6H28v14a3 3 0 0 1-6 0V19z" fill="#F4FBF8"/>
+      <path d="M31 46c6-1 7-8 14-8" fill="none" stroke="url(#og-flow)" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="48.6" cy="37.4" r="4" fill="#4BE3AC"/>
+    </g>
+  </g>
+  <text x="150" y="112" font-family="Plus Jakarta Sans" font-size="30" font-weight="800" fill="#F2F7F4" letter-spacing="-0.6">Fee<tspan fill="#4BE3AC">Flow</tspan></text>
+  <text x="1124" y="110" text-anchor="end" font-family="JetBrains Mono" font-size="15" font-weight="500" fill="#7E948B" letter-spacing="2.4">LOCAL-FIRST FEE TRACKER</text>
+
+  <!-- headline -->
+  <text x="76" y="266" font-family="Instrument Serif" font-size="92" fill="#FFFFFF">Fees, finally</text>
+  <text x="76" y="356" font-family="Instrument Serif" font-size="92" font-style="italic" fill="#4BE3AC">simple.</text>
+  <text x="78" y="418" font-family="Plus Jakarta Sans" font-size="23" font-weight="400" fill="#9DB2A9">Turn a photo of your register into structured fee records.</text>
+  <text x="78" y="452" font-family="Plus Jakarta Sans" font-size="23" font-weight="400" fill="#9DB2A9">Track paid, partial and unpaid — month by month.</text>
+
+  <!-- pipeline chips -->
+  <g font-family="Plus Jakarta Sans" font-size="16" font-weight="600">
+    <g transform="translate(78 502)">
+      <rect width="170" height="46" rx="23" fill="#12211D" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <circle cx="26" cy="23" r="6" fill="#4BE3AC"/>
+      <text x="44" y="29" fill="#DCE7E1">Register photo</text>
+    </g>
+    <text x="258" y="531" font-size="20" fill="#4C6159">→</text>
+    <g transform="translate(284 502)">
+      <rect width="200" height="46" rx="23" fill="#12211D" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <circle cx="26" cy="23" r="6" fill="#E8A33D"/>
+      <text x="44" y="29" fill="#DCE7E1">ChatGPT / Gemini</text>
+    </g>
+    <text x="494" y="531" font-size="20" fill="#4C6159">→</text>
+    <g transform="translate(520 502)">
+      <rect width="170" height="46" rx="23" fill="#12211D" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <circle cx="26" cy="23" r="6" fill="#4BE3AC"/>
+      <text x="44" y="29" fill="#DCE7E1">Paste &amp; import</text>
+    </g>
+  </g>
+
+  <!-- dashboard mock -->
+  <g transform="translate(700 176)">
+    <rect width="424" height="368" rx="26" fill="url(#og-card)" stroke="#FFFFFF" stroke-opacity="0.09"/>
+    <text x="30" y="52" font-family="Plus Jakarta Sans" font-size="15" font-weight="700" fill="#7E948B" letter-spacing="1.6">OCTOBER 2026</text>
+    <text x="30" y="104" font-family="Plus Jakarta Sans" font-size="46" font-weight="800" fill="#FFFFFF" letter-spacing="-1.4">₹1,24,500</text>
+    <text x="30" y="132" font-family="Plus Jakarta Sans" font-size="15" font-weight="500" fill="#7E948B">collected of ₹1,80,000</text>
+
+    <!-- donut -->
+    <g transform="translate(322 96)">
+      <circle r="52" fill="none" stroke="#1D2B27" stroke-width="17"/>
+      <circle r="52" fill="none" stroke="#4BE3AC" stroke-width="17" stroke-linecap="round"
+              stroke-dasharray="196 327" transform="rotate(-90)"/>
+      <circle r="52" fill="none" stroke="#E8A33D" stroke-width="17" stroke-linecap="round"
+              stroke-dasharray="72 327" stroke-dashoffset="-206" transform="rotate(-90)"/>
+      <text y="-2" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="26" font-weight="800" fill="#FFFFFF">69%</text>
+      <text y="20" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="12" font-weight="600" fill="#7E948B" letter-spacing="1">PAID</text>
+    </g>
+
+    <!-- rows -->
+    <g font-family="Plus Jakarta Sans" font-size="16" transform="translate(30 186)">
+      <rect width="364" height="52" rx="14" fill="#0E1815" stroke="#FFFFFF" stroke-opacity="0.05"/>
+      <circle cx="26" cy="26" r="5" fill="#4BE3AC"/>
+      <text x="46" y="24" font-weight="700" fill="#EAF2ED">Ananya Rao</text>
+      <text x="46" y="42" font-size="13" fill="#7E948B">Class 8-A</text>
+      <text x="338" y="24" text-anchor="end" font-family="JetBrains Mono" font-weight="600" fill="#EAF2ED">₹5,000</text>
+      <text x="338" y="42" text-anchor="end" font-size="12" font-weight="700" fill="#4BE3AC" letter-spacing="0.8">PAID</text>
+
+      <g transform="translate(0 62)">
+        <rect width="364" height="52" rx="14" fill="#0E1815" stroke="#FFFFFF" stroke-opacity="0.05"/>
+        <circle cx="26" cy="26" r="5" fill="#E8A33D"/>
+        <text x="46" y="24" font-weight="700" fill="#EAF2ED">Rahul Kumar</text>
+        <text x="46" y="42" font-size="13" fill="#7E948B">Class 8-A</text>
+        <text x="338" y="24" text-anchor="end" font-family="JetBrains Mono" font-weight="600" fill="#EAF2ED">₹2,500</text>
+        <text x="338" y="42" text-anchor="end" font-size="12" font-weight="700" fill="#E8A33D" letter-spacing="0.8">PARTIAL</text>
+      </g>
+    </g>
+    <rect x="30" y="318" width="364" height="8" rx="4" fill="#1D2B27"/>
+    <rect x="30" y="318" width="251" height="8" rx="4" fill="url(#og-flow)"/>
+  </g>
+
+  <rect x="0" y="622" width="1200" height="8" fill="url(#og-flow)" opacity="0.85"/>
+</svg>

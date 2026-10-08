@@ -1,0 +1,144 @@
+/* ==========================================================================
+   FeeFlow — design tokens
+   Two themes: "ink" (dark, default) and "paper" (light).
+   ========================================================================== */
+
+:root {
+  /* type */
+  --font-ui: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* scale */
+  --fs-xs: 0.6875rem;   /* 11 */
+  --fs-sm: 0.78125rem;  /* 12.5 */
+  --fs-md: 0.875rem;    /* 14 */
+  --fs-lg: 1rem;        /* 16 */
+  --fs-xl: 1.1875rem;   /* 19 */
+  --fs-2xl: 1.5rem;     /* 24 */
+  --fs-3xl: clamp(1.75rem, 1.4rem + 1.8vw, 2.375rem);
+  --fs-hero: clamp(2.5rem, 1.6rem + 4.6vw, 4.25rem);
+
+  /* spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 22px;
+  --sp-6: 28px;
+  --sp-7: 36px;
+  --sp-8: 48px;
+
+  /* radii */
+  --r-xs: 8px;
+  --r-sm: 11px;
+  --r-md: 14px;
+  --r-lg: 19px;
+  --r-xl: 26px;
+  --r-pill: 999px;
+
+  /* layout */
+  --nav-h: 66px;
+  --topbar-h: 60px;
+  --shell-max: 1240px;
+  --sidebar-w: 248px;
+
+  /* motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.32, 0.5, 1);
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 380ms;
+
+  /* status hues (shared) */
+  --paid-h: 158;
+  --partial-h: 36;
+  --unpaid-h: 10;
+}
+
+/* ---------------------------------------------------------------- dark --- */
+:root,
+[data-theme='ink'] {
+  color-scheme: dark;
+
+  --bg: #0a0f0e;
+  --bg-veil: radial-gradient(1100px 520px at 78% -12%, rgba(31, 181, 131, 0.16), transparent 62%),
+             radial-gradient(760px 420px at -10% 8%, rgba(31, 181, 131, 0.07), transparent 60%);
+  --ledger-line: rgba(255, 255, 255, 0.028);
+
+  --surface: #101917;
+  --surface-2: #15201d;
+  --surface-3: #1a2724;
+  --surface-glass: rgba(16, 25, 23, 0.82);
+
+  --line: #21302c;
+  --line-2: #2b3d38;
+  --line-soft: rgba(255, 255, 255, 0.055);
+
+  --text: #edf4f0;
+  --text-2: #a4b8b0;
+  --text-3: #6d837b;
+
+  --brand: #2bd396;
+  --brand-2: #52e3ac;
+  --brand-deep: #14a877;
+  --brand-ink: #04241a;
+  --brand-soft: rgba(43, 211, 150, 0.13);
+  --brand-line: rgba(43, 211, 150, 0.32);
+
+  --paid: #33d69a;
+  --paid-soft: rgba(51, 214, 154, 0.13);
+  --partial: #e9a93f;
+  --partial-soft: rgba(233, 169, 63, 0.14);
+  --unpaid: #e4674f;
+  --unpaid-soft: rgba(228, 103, 79, 0.14);
+
+  --ring: rgba(124, 240, 200, 0.55);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 10px 30px -14px rgba(0, 0, 0, 0.65), 0 2px 6px -2px rgba(0, 0, 0, 0.4);
+  --shadow-3: 0 24px 60px -24px rgba(0, 0, 0, 0.75), 0 4px 14px -6px rgba(0, 0, 0, 0.5);
+  --inset-hi: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+/* -------------------------------------------------------------- light --- */
+[data-theme='paper'] {
+  color-scheme: light;
+
+  --bg: #f4f2ec;
+  --bg-veil: radial-gradient(1000px 480px at 80% -14%, rgba(12, 143, 102, 0.13), transparent 62%),
+             radial-gradient(700px 380px at -8% 6%, rgba(12, 143, 102, 0.06), transparent 60%);
+  --ledger-line: rgba(24, 42, 35, 0.045);
+
+  --surface: #ffffff;
+  --surface-2: #fbfaf6;
+  --surface-3: #f2efe7;
+  --surface-glass: rgba(255, 255, 255, 0.86);
+
+  --line: #e3ded1;
+  --line-2: #d3ccba;
+  --line-soft: rgba(24, 42, 35, 0.07);
+
+  --text: #122019;
+  --text-2: #506058;
+  --text-3: #7d8d84;
+
+  --brand: #0b8a62;
+  --brand-2: #0aa071;
+  --brand-deep: #08704f;
+  --brand-ink: #ffffff;
+  --brand-soft: rgba(11, 138, 98, 0.1);
+  --brand-line: rgba(11, 138, 98, 0.3);
+
+  --paid: #0c9468;
+  --paid-soft: rgba(12, 148, 104, 0.12);
+  --partial: #a56a08;
+  --partial-soft: rgba(165, 106, 8, 0.13);
+  --unpaid: #bf4630;
+  --unpaid-soft: rgba(191, 70, 48, 0.12);
+
+  --ring: rgba(11, 138, 98, 0.4);
+  --shadow-1: 0 1px 2px rgba(20, 34, 28, 0.07);
+  --shadow-2: 0 10px 26px -16px rgba(20, 34, 28, 0.28), 0 2px 6px -2px rgba(20, 34, 28, 0.08);
+  --shadow-3: 0 24px 54px -26px rgba(20, 34, 28, 0.34), 0 4px 14px -6px rgba(20, 34, 28, 0.12);
+  --inset-hi: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
